@@ -1,0 +1,8 @@
+streamlit
+requests
+bs4
+re
+base64
+pandas
+numpy
+setuptools
