@@ -2,8 +2,6 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 import re
-import joblib
-import os
 import base64
 
 from load_css import local_css
