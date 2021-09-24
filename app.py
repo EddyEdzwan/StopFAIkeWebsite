@@ -62,7 +62,7 @@ if on_heroku:
     json_dump = json.dumps(firestore_credentials)
 
     # Authenticate to Firestore with the JSON account key.
-    db = firestore.Client.from_service_account_info(json.loads(json_dump))
+    db = firestore.Client.from_service_account_info(json_dump)
 
 # Or get firestore credentials from local file
 else:
