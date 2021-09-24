@@ -59,10 +59,12 @@ if on_heroku:
         "auth_provider_x509_cert_url": os.environ["auth_provider_x509_cert_url"],
         "client_x509_cert_url": os.environ["client_x509_cert_url"]
     }
-    json_dump = json.dumps(firestore_credentials)
+
+    st.write(os.environ['type'])
+    # json_dump = json.dumps(firestore_credentials)
 
     # Authenticate to Firestore with the JSON account key.
-    db = firestore.Client.from_service_account_info(firestore_credentials)
+    # db = firestore.Client.from_service_account_info(json.loads(json_dump))
 
 # Or get firestore credentials from local file
 else:
@@ -73,17 +75,6 @@ else:
         Please check your Heroku environment variables or provide a firestore-key.json in the same directory.
         Information sent and received from this page will not be captured</div>''', unsafe_allow_html=True)
         db = None
-
-# Create a reference to the Google post.
-if db:
-    doc_ref = db.collection("url_predictions").document("user_input_predictions")
-    # Then get the data at that reference
-    doc = doc_ref.get()
-
-    # Let's see what we got!
-    st.write("The id is: ", doc.id)
-    st.write("The contents are: ", doc.to_dict())
-
 
 st.markdown('''
 <div style="color:black;font-size:20px; text-align: center;"> Welcome to the front-page of our modest application. This application aims to provide you, our users, with a probability on an article you are reading \
