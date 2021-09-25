@@ -179,7 +179,7 @@ if direction == 'URL':
                 st.markdown(disclaimer, unsafe_allow_html=True)
                 
             else:
-                st.markdown(f'''<div class="highlight green" style='color:white;font-size:30px; text-align: center;'>TRUE
+                st.markdown(f'''<div class="highlight green" style='color:black;font-size:30px; text-align: center;'>TRUE
                 <div> {(1-pred)*100:.1f} % </div> </div>''', unsafe_allow_html=True)
 
                 st.markdown(disclaimer, unsafe_allow_html=True)      
@@ -226,7 +226,7 @@ elif direction == 'Textual Content':
                 st.markdown(disclaimer, unsafe_allow_html=True)
 
             else:
-                st.markdown(f'''<div class="highlight green" style='color:white;font-size:30px; text-align: center;'>TRUE
+                st.markdown(f'''<div class="highlight green" style='color:black;font-size:30px; text-align: center;'>TRUE
                 <div> {(1-pred)*100:.1f} % </div> </div>''', unsafe_allow_html=True)
 
                 st.markdown(disclaimer, unsafe_allow_html=True)            
