@@ -124,9 +124,7 @@ disclaimer = f'''<div class="highlight white" style='color:black;font-size:20px;
                     '''
 
 if direction == 'URL':
-    txt = st.text_area('', '''
-    Please enter a URL - https://example.com
-    ''')
+    txt = st.text_area('', '''Please enter a URL - https://example.com''')
 
     url_regex = re.compile(
         r'^(?:http|ftp)s?://' # http:// or https://
