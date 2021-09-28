@@ -80,15 +80,21 @@ st.markdown('''
 as to its likelihood of being untrue (a.k.a. credibility index). Our objective is to enable you to benefit from our model, built on fact-checked truths and widespread untruths, \
 to allow you to determine for yourself if you can trust what you are reading</div>''', unsafe_allow_html= True)
 
-st.text(f'''{"-"*228}''')
-
-st.markdown('''<div style="color:black;font-size:30px; text-align: center;"> Join us in our battle against misinformation </div>''', unsafe_allow_html=True)
-
 st.text('')
-st.text(f'''{"-"*228}''')
+
+col1_1, col2_1, col3_1= st.columns([1,1.25,1])
+
+with col1_1:
+    st.write("")
+
+with col2_1:
+    st.markdown('''<div class="highlight white" style="color:black;font-size:30px; text-align: center;"> Join us in our battle against misinformation </div>''', unsafe_allow_html=True)
+
+with col3_1:
+    st.write("")
 
 #Dividing up page into columns to show image in center column
-col1, col2, col3, col4, col5, col6, col7 = st.columns([1,1,1,1.5,1,1,1])
+col1, col2, col3, col4, col5, col6, col7 = st.columns([1,1,1,1.2,1,1,1])
 
 with col1:
     st.write("")
