@@ -182,7 +182,7 @@ if direction == 'URL':
                 st.markdown(disclaimer, unsafe_allow_html=True)
 
         # Getting the shap values from the endpoint
-        shap_response = requests.get(model_url+'shapvalues', params={'article': txt})
+        shap_response = requests.get(model_url+'shapvalues', params={'article': title})
 
         values = shap_response.json()['values']
         base_values = shap_response.json()['base_values']
