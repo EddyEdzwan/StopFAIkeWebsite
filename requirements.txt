@@ -6,3 +6,4 @@ numpy==1.19.5
 setuptools
 google-cloud-firestore
 shap==0.39.0
+matplotlib==3.4.1

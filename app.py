@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 from google.cloud import firestore
 
-from utils import local_css, set_png_as_page_bg
+from utils import local_css, set_png_as_page_bg, st_shap
 
 from model_explanation import CustomSHAPObject
 
@@ -24,11 +24,6 @@ set_png_as_page_bg('images/Newspaper_background_cropped.jpg')
 
 # Set warning for pyplot without argument to not appear
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
-# Initialising js for shap
-def st_shap(plot, height=None):
-    shap_html = f"<head>{shap.getjs()}</head><body style='background-color: white;'>{plot.html()}</body>"
-    st.components.v1.html(shap_html, height=height)
 
 # Check if App is on Heroku
 on_heroku = False
