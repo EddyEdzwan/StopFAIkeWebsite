@@ -25,6 +25,9 @@ set_png_as_page_bg('images/Newspaper_background_cropped.jpg')
 # Set warning for pyplot without argument to not appear
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+# Initialising js for shap
+shap.initjs()
+
 # Check if App is on Heroku
 on_heroku = False
 if 'private_key' in os.environ:
