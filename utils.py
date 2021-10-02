@@ -2,7 +2,7 @@
 https://discuss.streamlit.io/t/are-you-using-html-in-markdown-tell-us-why/96/25
 """
 import base64
-import shap
+from shap import getjs
 import streamlit as st
 
 def local_css(file_name):
@@ -32,5 +32,5 @@ def set_png_as_page_bg(png_file):
 
 # Custom function to show plots from shap
 def st_shap(plot, height=None):
-    shap_html = f"<head>{shap.getjs()}</head><body style='background-color: white;'>{plot.html()}</body>"
+    shap_html = f"<head>{getjs()}</head><body style='background-color: white;'>{plot.html()}</body>"
     st.components.v1.html(shap_html, height=height)
