@@ -2,7 +2,7 @@
 https://discuss.streamlit.io/t/are-you-using-html-in-markdown-tell-us-why/96/25
 """
 import base64
-from shap import getjs
+import shap
 import streamlit as st
 
 def local_css(file_name):
